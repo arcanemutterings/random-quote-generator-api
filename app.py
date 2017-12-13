@@ -8,7 +8,6 @@ CORS(app)
 @app.route('/', methods=['GET'])
 def get_quote():
     data=getQuote()
-    print(data)
     return jsonify(id=data[0][0],
                    quote=data[0][1],
                   author=data[0][2])
